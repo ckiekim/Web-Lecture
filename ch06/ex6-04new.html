@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>URL에 자바스크립트 작성</title>
+  <script type="text/javascript">
+  /*
+   * These are multi-line comments
+   */
+    function nameConfirm() { // This is comment!!
+      var name = prompt("이름을 입력하세요", "홍길동");
+      if (name != null) {
+        var ret = confirm(name + " 을/를 전송할까요?");
+        if (ret == true) {
+          document.write("<h3>전송한 이름</h3>");
+          document.write("<hr>");
+          document.write(name);
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>링크의 href에 자바스크립트 작성</h3>
+  <hr>
+  <a href="javascript:alert('클릭하셨어요?')">
+      클릭해보세요</a>
+  <hr>
+  <a href="javascript:nameConfirm()">이름 확인</a>
+</body>
+</html>
