@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>if-else</title>
+</head>
+<body>
+	<h3>switch-case를 이용한 학점 매기기</h3>
+	<hr>
+	<script>
+		var grade;
+		var score = parseInt(prompt("점수를 입력하세요", 100));
+		switch(Math.floor(score/10)) {
+			case 10:
+			case 9:
+				grade = "A"; break;
+			case 8:
+				grade = "B"; break;
+			case 7:
+				grade = "C"; break;
+			case 6:
+				grade = "D"; break;
+			default:
+				grade = "F";
+		}
+		document.write(score + "점은 " + grade + "입니다.<br>")
+	</script>
+</body>
+</html>

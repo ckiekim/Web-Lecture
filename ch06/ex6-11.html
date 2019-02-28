@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>논리 연산</title>
+</head>
+<body>
+	<h3>논리 연산</h3>
+	<hr>
+	<script>
+		function parseBoolean(arg) {
+			return arg=='true' ? true : false;
+			/*
+			if (arg == 'true')
+				return true;
+			else  					// if (arg == 'false')
+				return false;
+			*/
+		}
+		var x=parseBoolean(prompt("x 값(논리값)을 입력하세요.", "true"));
+		var y=parseBoolean(prompt("y 값(논리값)을 입력하세요.", "false"));
+
+		document.write("x=" + x + ", y=" + y + "<br><br>");
+		document.write("x && y : "+ (x&&y) +"<br>");
+		document.write("x || y : "+ (x||y) +"<br>");
+		document.write("!x : " + (!x) +"<br>");
+		document.write("<hr>");
+		document.write("(3>2) && (3<4) : " + ((3>2) && (3<4)) + "<br>");
+		document.write("(3==-2) || (-1<0) : " + ((3==2)||(-1<0)));
+	</script>
+</body>
+</html>
