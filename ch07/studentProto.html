@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function Student(name, phone, score) {
+      this.academy = "이젠";
+      this.name = name;
+      this.phone = phone;
+      this.score = score;
+
+      this.getGrade = function() {
+        switch(Math.floor(this.score/10)) {
+          case 10:
+          case 9:
+            return "A"; break;
+          case 8:
+            return "B"; break;
+          case 7:
+            return "C"; break;
+          case 6:
+            return "D"; break;
+          default:
+            return "F";
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+    var st1 = new Student("서성종", "010-7670-5900", 90);
+    document.write(st1.name, st1.score, st1.getGrade(),"<br>");
+    var st2 = new Student("이세웅", "010-2171-9300", 90);
+    document.write(st2.name, st2.score, st2.getGrade(),"<br>");
+  </script>
+</body>
+</html>

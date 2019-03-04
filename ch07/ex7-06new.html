@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Elapsed Time</title>
+  <script type="text/javascript">
+    var startTime;
+    function start() {
+      startTime = new Date();
+    }
+    function stop() {
+      var stopTime = new Date();
+      document.write("시작 시간 : ");
+      document.write(startTime.toLocaleTimeString(), ".",
+          startTime.getMilliseconds(), "<br><br>");
+      document.write("종료 시간 : ");
+      document.write(stopTime.toLocaleTimeString(), ".",
+          stopTime.getMilliseconds(), "<br><br>");
+      var timeGap = stopTime.getTime() - startTime.getTime();
+      document.write("경과 시간 : ", timeGap, " msec<br>");
+    }
+  </script>
+</head>
+<body>
+  <h3>경과 시간 구하기</h3>
+  <hr>
+  <button onclick="start()">시작</button>&nbsp;&nbsp;
+  <button onclick="stop()">종료</button>
+</body>
+</html>

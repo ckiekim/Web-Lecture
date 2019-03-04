@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>사용자 입력 처리</title>
+</head>
+<body>
+	<h3>사용자 입력 처리</h3>
+	<hr>
+	<script>
+		var input = prompt("이름을 ','로 분리하여 입력하세요.");
+		document.write(input + "<br><hr>");
+		var names = input.split(",");
+		names.sort();
+		for (var i=0; i<names.length; i++)
+			document.write(names[i] + "<br>");
+	</script>
+</body>
+</html>

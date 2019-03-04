@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+    var startTime;
+    function start() {
+      startTime = new Date();
+    }
+    function stop() {
+      var stopTime = new Date();
+      var div = document.getElementById("startDiv");
+      div.textContent = "시작 시간 : " +
+          startTime.toLocaleTimeString() + "." +
+          startTime.getMilliseconds();
+      div = document.getElementById("stopDiv");
+      div.textContent = "종료 시간 : " +
+          stopTime.toLocaleTimeString() + "." +
+          stopTime.getMilliseconds();
+      var timeGap = stopTime.getTime() - startTime.getTime();
+      div = document.getElementById("resultDiv");
+      div.textContent = "경과 시간 : " + timeGap + "밀리초";
+    }
+  </script>
+</head>
+<body>
+  <h3>경과 시간 구하기</h3>
+  <hr>
+  <button onclick="start()">시작</button>
+  <button onclick="stop()">종료</button>
+  <br><br>
+  <div id="startDiv"></div>
+  <div id="stopDiv"></div><br>
+  <div id="resultDiv"></div>
+</body>
+</html>
