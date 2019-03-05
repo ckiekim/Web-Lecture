@@ -1,19 +1,19 @@
 ﻿<!DOCTYPE html>
-<html><head>
-<meta charset="UTF-8">
-<title>라면을 끓이는 순서</title>
-<script>
-	function addItem(olObj) {
-		var text = prompt("라면을 끓이는 순서를 입력하라", "");
-		if(text == null || text == "")
-			return;
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>라면을 끓이는 순서</title>
+	<script>
+		function addItem(olObj) {
+			var text = prompt("라면을 끓이는 순서를 입력하라", "");
+			if(text == null || text == "")
+				return;
 
-		var liObj = document.createElement("li");
-		liObj.innerHTML = text;
-		olObj.appendChild(liObj);
-
-	}
-</script>
+			var liObj = document.createElement("li");
+			liObj.innerHTML = text;
+			olObj.appendChild(liObj);
+		}
+	</script>
 </head>
 <body>
 	<h3>라면을 끓이는 순서</h3>

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html><head>
-<meta charset="UTF-8">
-<title>DOM 객체 동적 삽입/삭제</title>
-<script>
-function addAnswer(obj, text) {
-	var parent = obj.parentElement;
-	if(obj != parent.lastElementChild)
-		return;
-	var newP = document.createElement("p");
-	newP.onclick = function() {
-		var par = this.parentElement;
-		par.removeChild(this);
-	};
-	newP.innerHTML = text;
-	parent.appendChild(newP);
-}
-</script>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM 객체 동적 삽입/삭제</title>
+	<script>
+		function addAnswer(obj, text) {
+			var parent = obj.parentElement;
+			if(obj != parent.lastElementChild)
+				return;
+			var newP = document.createElement("p");
+			newP.onclick = function() {
+				var par = this.parentElement;
+				par.removeChild(this);
+			};
+			newP.innerHTML = text;
+			parent.appendChild(newP);
+		}
+	</script>
 </head>
 <body>
 	<h3>정답의 동적 삽입/삭제</h3>

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html><head>
-<meta charset="UTF-8">
-<title>transform:rotate()</title>
-<script>
-	var degree=90;
-	function rotate(obj) {
-		obj.style.transform = "rotate(" + degree + "deg)";
-		degree += 90;
-		degree %= 360;
-	}
-</script>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>transform:rotate()</title>
+	<script>
+		var degree=90;
+		function rotate(obj) {
+			obj.style.transform = "rotate(" + degree + "deg)";
+			degree += 90;
+			degree %= 360;
+		}
+	</script>
 </head>
 <body>
 	<h3>클릭하면 90도 회전합니다.</h3>
