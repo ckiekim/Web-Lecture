@@ -10,17 +10,15 @@
 	<style>
 		body * { margin: 5px; padding: 5px; border: solid thin gray; }
 		* { font-size: 18px; font-weight: bold; }
-
 		.class2 { border-width: thick; }
 		.u_bgpurple { background-color: purple; color: white; }
 		.u_dotted { border-style : dotted; }
-
 	</style>
 	<script>
 		$(document).ready(function() {
 			$('span:first').addClass('u_bgpurple'); 						// (1)
 			$('p:eq(1)').removeClass('class2').addClass('u_bgpurple');		// (2)
-			$('span').toggleClass('u_bgpurple');							// (3)
+			$('span').toggleClass('u_bgpurple');/**/							// (3)
 		});
 	</script>
 </head>

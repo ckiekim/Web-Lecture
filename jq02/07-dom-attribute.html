@@ -9,13 +9,17 @@
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script>
 		$(document).ready(function() {
+			$('#s_id').attr('disabled', false);
 			alert('학번 disabled 속성값 : ' + $('#s_id').attr('disabled'));		// (1)
-			$('#s_name').attr('disabled', false);							// (2)
+			$('#s_name').attr('disabled', false);								// (2)
 			$('input:radio').attr('checked', false);						// (3)
-			$('input[name="s_tel"]').removeAttr('placeholder'); 			// (4)
-			var age = $('input[type="number"]').val();						// (5)
+			$('input[name="s_tel"]').removeAttr('placeholder'); // (4)
+			var age = $('input[type="number"]').val();					// (5)
 			age = eval(age) + 15;
-			$('input[type="number"]').val(age);
+			$('input[type="number"]').val(age);/**/
+			$('li').each(function(){
+				alert($(this).text());
+			});
 		});
 	</script>
 </head>
@@ -61,6 +65,9 @@
 		<div data-role="footer" data-theme="b" data-position="fixed">
 			<h4>footer 영역</h4>
 		</div>
+		<ul>
+			<li>봄</li><li>여름</li><li>가을</li><li>겨울</li>
+		</ul>
 	</div>
 </body>
 </html>

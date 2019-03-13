@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    function testInit() {
+      var div1 = document.getElementById("div1");
+      var div2 = document.getElementById("div2");
+      var div3 = document.getElementById("div3");
+      var div4 = document.getElementById("div4");
+      div1.addEventListener("click", function() { this.innerHTML = "Hello JS"; });
+      div2.onclick = function() { this.innerHTML = "Hello JS"; }
+      div3.onclick = function(e) { this.innerHTML = "Hello JS"; }
+      div4.onclick = f; function f() { this.innerHTML = "Hello JS"; }
+    }
+  </script>
+</head>
+<body onload="testInit()">
+  <h3>이벤트 리스너</h3>
+  <hr>
+  <div id="div1">div1</div><br>
+  <div id="div2">div2</div><br>
+  <div id="div3">div3</div><br>
+  <div id="div4">div4</div><br>
+</body>
+</html>

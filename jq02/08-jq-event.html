@@ -11,7 +11,6 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script>
 		$(document).ready( function() {
-
 			// focus/blur 이벤트
 			$('input').focus(function() {
 					$(this).css('background-color', 'orange');
@@ -19,13 +18,11 @@
 			$('input').blur(function() {
 					$(this).css('background-color', 'white');
 			});
-
 			// click 이벤트
 			$('div').bind('click', function() {
 				$(this).width($(this).width() * 1.5);
 				$(this).height($(this).height() * 1.5);
 			});
-
 			// toggle 이벤트
 			$('img').toggle(
 				function() {
@@ -34,13 +31,13 @@
 				function() {
 					$(this).css('opacity','1.0');
 				}
-			);
+			);/**/
 		});
 	</script>
 </head>
 <body>
 	focus/blur 이벤트<br><input type="text" name="text1" value="입력하세요"/><br>
 	click 이벤트<div></div>
-	toggle 이벤트<br><img src="./bgimg1.jpg">
+	toggle 이벤트<br><img src="./bgimg1.jpg" style="opacity:1.0">
 </body>
 </html>
